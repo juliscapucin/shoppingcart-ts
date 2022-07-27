@@ -1,0 +1,18 @@
+.shop__container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+
+  .shop__page-title {
+    margin-bottom: 5rem;
+  }
+
+  .shop__grid {
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-gap: 1px;
+    grid-template-columns: repeat(3, 1fr);
+    overflow: hidden;
+  }
+}

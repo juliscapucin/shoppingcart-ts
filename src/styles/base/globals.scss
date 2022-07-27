@@ -1,0 +1,108 @@
+/*
+=============== 
+Global Styles
+===============
+*/
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  position: relative;
+  padding: 10rem 2rem 8rem 2rem;
+  max-width: 100vw;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  overscroll-behavior-y: none;
+  font-family: $font-primary;
+  font-weight: 100;
+  background-color: $clr-white;
+  line-height: 1.5;
+  font-size: 1.6rem;
+  letter-spacing: 0.01rem;
+
+  &.body--disable-scroll {
+    overflow-y: hidden;
+  }
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: $clr-black;
+  transition: $transition;
+  // Style for react-router <NavLink />
+  &.active {
+    color: #999;
+  }
+}
+a:hover {
+  color: $clr-tint;
+}
+
+img {
+  display: block;
+}
+button,
+button:focus {
+  font-size: 1.8rem;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+button:active {
+  outline: none;
+  border: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: $clr-black;
+  line-height: 1;
+  font-family: $font-primary;
+  letter-spacing: 0.07rem;
+}
+h1 {
+  font-size: clamp(11.6rem, 12vw, 11.6rem);
+  line-height: 0.8;
+}
+h2 {
+  font-size: clamp(3.4rem, 6vw, 6rem);
+}
+h3 {
+  font-size: clamp(2.6rem, 5vw, 4.8rem);
+}
+h4 {
+  font-size: clamp(3.4rem, 3.5vw, 3.4rem);
+}
+h5 {
+  letter-spacing: 0.05rem;
+  line-height: 1.4;
+  font-size: clamp(1.6rem, 3vw, 2.6rem);
+}
+h6 {
+  letter-spacing: 0.05rem;
+  line-height: 1.8;
+  font-size: clamp(1.4rem, 2vw, 1.8rem);
+}
+p {
+  color: $clr-black;
+}
+
+strong {
+  font-weight: 600;
+}

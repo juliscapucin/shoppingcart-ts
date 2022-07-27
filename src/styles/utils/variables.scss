@@ -1,0 +1,24 @@
+/* Fonts */
+$font-primary: ff-real-headline-pro;
+$font-secondary: ff-real-text-pro;
+
+/* Colors */
+$clr-white: #ffffff;
+$clr-black: #121212;
+$clr-light-grey: #dddddd;
+$clr-medium-grey: #808080;
+$clr-dark-grey: #3e3e3e;
+$clr-tint: #5115f7;
+$clr-outline: #e7e5e4;
+
+/* Transitions */
+$ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+$transition: all 0.3s ease-in;
+$transition-slow: all 0.8s $ease-out-expo;
+
+/* Layout */
+$max-width: 1170px;
+$fixed-width: 620px;
+
+/* Responsive */
+$desktop: 992px;
