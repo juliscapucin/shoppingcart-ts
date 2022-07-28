@@ -1,8 +1,11 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import { useShoppingCartContext } from "../context/ShoppingCartContext";
 import ShoppingBag from "./icons/ShoppingBag";
 
 export default function Navbar() {
+  const { openCart, cartQuantity } = useShoppingCartContext();
+
   return (
     <nav className='navbar__container'>
       <NavLink to='/'>
@@ -19,8 +22,8 @@ export default function Navbar() {
           <h5>About</h5>
         </NavLink>
 
-        <button className='btn__shopping-bag'>
-          <div className='btn__item-quantity'>3</div>
+        <button className='btn__shopping-bag' onClick={openCart}>
+          <div className='btn__item-quantity'>{cartQuantity}</div>
           <ShoppingBag />
         </button>
       </div>

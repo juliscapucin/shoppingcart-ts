@@ -1,0 +1,26 @@
+.shoppingcart__container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 70vw;
+  height: 100vh;
+  padding: 2rem;
+  background-color: $clr-white;
+  border-left: 1px solid $clr-black;
+
+  .btn__close__container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+
+    .btn__close {
+      width: 3rem;
+      height: 3rem;
+
+      svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

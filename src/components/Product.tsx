@@ -1,7 +1,11 @@
 import { useShoppingCartContext } from "../context/ShoppingCartContext";
 import { formatCurrency } from "../utilities/formatCurrency";
 
+import AddBox from "./icons/AddBox";
+import SubtractBox from "./icons/SubtractBox";
+
 type ProductProps = {
+  index: number;
   id: number;
   name: string;
   price: number;
@@ -11,7 +15,23 @@ type ProductProps = {
   websiteUrl: string;
 };
 
-export default function Product({ id, name, price, imgUrl }: ProductProps) {
+// [row-start, column-start, row-span, column-span]
+const gridAreas = [
+  [1, 6, 6, 5],
+  [6, 1, 6, 5],
+  [12, 6, 6, 5],
+  [18, 1, 6, 5],
+  [24, 6, 6, 5],
+  [30, 1, 6, 5],
+];
+
+export default function Product({
+  index,
+  id,
+  name,
+  price,
+  imgUrl,
+}: ProductProps) {
   const {
     getItemQuantity,
     increaseCartQuantity,
@@ -20,18 +40,27 @@ export default function Product({ id, name, price, imgUrl }: ProductProps) {
   } = useShoppingCartContext();
 
   const quantity = getItemQuantity(id);
+  const gridPosition = gridAreas[index];
+  const [row, column, spanRow, spanColumn] = gridPosition;
 
   return (
-    <article className='product__container'>
+    <article
+      className='product__container'
+      style={{
+        gridArea: `${row} / ${column} / span ${spanRow} / span ${spanColumn}`,
+      }}
+    >
       <div className='product__img'>
         <img src={imgUrl} alt={name} />
       </div>
       <div className='product__info'>
-        <div className='product__title'>
-          <h3>{name}</h3>
-        </div>
-        <div className='product__price'>
-          <h6>{formatCurrency(price)}</h6>
+        <div className='product__text'>
+          <div className='product__title'>
+            <h3>{name}</h3>
+          </div>
+          <div className='product__price'>
+            <h6>{formatCurrency(price)}</h6>
+          </div>
         </div>
         <div className='btn__add-to-cart'>
           {quantity === 0 ? (
@@ -45,18 +74,20 @@ export default function Product({ id, name, price, imgUrl }: ProductProps) {
                   className='btn__minus'
                   onClick={() => decreaseCartQuantity(id)}
                 >
-                  -
+                  <SubtractBox />
                 </button>
                 <div className='quantity'>{quantity}</div>
                 <button
                   className='btn__plus'
                   onClick={() => increaseCartQuantity(id)}
                 >
-                  +
+                  <AddBox />
                 </button>
               </div>
               <div className='btn__remove-item'>
-                <button onClick={() => removeFromCart(id)}>Remove Item</button>
+                <button onClick={() => removeFromCart(id)}>
+                  <p>Remove</p>
+                </button>
               </div>
             </div>
           )}

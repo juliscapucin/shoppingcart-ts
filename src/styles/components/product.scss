@@ -4,7 +4,7 @@
 
   .product__img {
     width: 100%;
-    height: 35rem;
+    height: 45rem;
 
     img {
       width: 100%;
@@ -14,6 +14,41 @@
   }
 
   .product__info {
-    padding: 2rem 1rem 3rem 1rem;
+    padding: 2rem 2rem 4rem 2rem;
+    display: flex;
+    justify-content: space-between;
+
+    .btn__add-to-cart {
+      .control__quantity__container {
+        .btns__change-quantity {
+          display: flex;
+          align-items: center;
+
+          .quantity {
+            width: 5rem;
+            text-align: center;
+            font-weight: 200;
+          }
+
+          button {
+            width: 1.8rem;
+            height: 1.8rem;
+            display: grid;
+            place-items: center;
+          }
+        }
+
+        .btn__remove-item {
+          display: flex;
+          justify-content: center;
+          margin-top: 1rem;
+
+          button {
+            font-weight: 100;
+            font-size: clamp(1.4rem, 1.4vw, 1.4rem);
+          }
+        }
+      }
+    }
   }
 }
