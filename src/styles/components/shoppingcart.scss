@@ -11,6 +11,12 @@
   transform: translateX(100%);
   transition: $transition-slow;
 
+  .shoppingcart__total {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 3rem;
+  }
+
   &[data-open="true"] {
     transform: translateX(0);
   }

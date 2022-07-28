@@ -11,6 +11,10 @@
   background-color: $clr-white;
   border-bottom: 1px solid $clr-black;
 
+  h4 {
+    letter-spacing: -0.02rem;
+  }
+
   .navbar__links {
     display: flex;
     gap: 3rem;

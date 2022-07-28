@@ -9,7 +9,9 @@ export default function Navbar() {
   return (
     <nav className='navbar__container'>
       <NavLink to='/'>
-        <h5>TomCrew Ceramics</h5>
+        <h4>
+          <strong>Tom Crew</strong> Ceramics
+        </h4>
       </NavLink>
       <div className='navbar__links'>
         <NavLink to='/shop'>

@@ -43,7 +43,7 @@ a {
   transition: $transition;
   // Style for react-router <NavLink />
   &.active {
-    color: #999;
+    border-bottom: 1px solid $clr-black;
   }
 }
 a:hover {

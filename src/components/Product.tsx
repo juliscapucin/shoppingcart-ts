@@ -3,6 +3,7 @@ import { formatCurrency } from "../utilities/formatCurrency";
 
 import AddBox from "./icons/AddBox";
 import SubtractBox from "./icons/SubtractBox";
+import QuantityControl from "./QuantityControl";
 
 type ProductProps = {
   index: number;
@@ -13,6 +14,7 @@ type ProductProps = {
   unsplashProfile: string;
   imgUrl: string;
   websiteUrl: string;
+  quantity: number;
 };
 
 // [row-start, column-start, row-span, column-span]
@@ -68,22 +70,8 @@ export default function Product({
               + Add to Cart
             </button>
           ) : (
-            <div className='control__quantity__container'>
-              <div className='btns__change-quantity'>
-                <button
-                  className='btn__minus'
-                  onClick={() => decreaseCartQuantity(id)}
-                >
-                  <SubtractBox />
-                </button>
-                <div className='quantity'>{quantity}</div>
-                <button
-                  className='btn__plus'
-                  onClick={() => increaseCartQuantity(id)}
-                >
-                  <AddBox />
-                </button>
-              </div>
+            <div className='product__quantity__container'>
+              <QuantityControl id={id} quantity={quantity} />
               <div className='btn__remove-item'>
                 <button onClick={() => removeFromCart(id)}>
                   <p>Remove</p>
