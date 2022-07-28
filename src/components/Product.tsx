@@ -18,11 +18,11 @@ type ProductProps = {
 // [row-start, column-start, row-span, column-span]
 const gridAreas = [
   [1, 6, 6, 5],
-  [6, 1, 6, 5],
-  [12, 6, 6, 5],
-  [18, 1, 6, 5],
-  [24, 6, 6, 5],
-  [30, 1, 6, 5],
+  [7, 1, 6, 5],
+  [13, 6, 6, 5],
+  [19, 1, 6, 5],
+  [25, 6, 6, 5],
+  [31, 1, 6, 5],
 ];
 
 export default function Product({

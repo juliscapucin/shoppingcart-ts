@@ -1,10 +1,14 @@
 .navbar__container {
   position: fixed;
-  top: 2rem;
+  z-index: 100;
+  top: 0rem;
   right: 2rem;
   left: 2rem;
+  height: 8rem;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  background-color: $clr-white;
   border-bottom: 1px solid $clr-black;
 
   .navbar__links {

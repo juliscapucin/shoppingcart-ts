@@ -1,12 +1,19 @@
 .shoppingcart__container {
   position: fixed;
+  z-index: 200;
   top: 0;
   right: 0;
-  width: 70vw;
+  width: 50vw;
   height: 100vh;
   padding: 2rem;
   background-color: $clr-white;
   border-left: 1px solid $clr-black;
+  transform: translateX(100%);
+  transition: $transition-slow;
+
+  &[data-open="true"] {
+    transform: translateX(0);
+  }
 
   .btn__close__container {
     width: 100%;
