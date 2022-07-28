@@ -10,8 +10,10 @@ Imports
 @import "./base/reset.scss";
 @import "./base/globals.scss";
 
+@import "./components/cartitem.scss";
 @import "./components/navbar.scss";
 @import "./components/product.scss";
+@import "./components/quantitycontrol.scss";
 @import "./components/shoppingcart.scss";
 
 @import "./pages/shop.scss";

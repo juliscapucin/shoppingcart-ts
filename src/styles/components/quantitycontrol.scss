@@ -1,0 +1,19 @@
+.control__quantity__container {
+  .btns__change-quantity {
+    display: flex;
+    align-items: center;
+
+    .quantity {
+      width: 5rem;
+      text-align: center;
+      font-weight: 200;
+    }
+
+    button {
+      width: 1.8rem;
+      height: 1.8rem;
+      display: grid;
+      place-items: center;
+    }
+  }
+}

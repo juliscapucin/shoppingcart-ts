@@ -1,0 +1,38 @@
+.cartitem__container {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  gap: 2rem;
+  margin-top: 3rem;
+  width: 100%;
+  height: 20rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid $clr-black;
+
+  .cartitem__btn__delete {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+
+  .cartitem__img__container {
+    width: 35%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .cartitem__name {
+    margin-bottom: 2rem;
+  }
+
+  .cartitem__total {
+    margin: auto 0 0 auto;
+  }
+}
